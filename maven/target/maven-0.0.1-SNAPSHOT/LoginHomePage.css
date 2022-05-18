@@ -1,0 +1,244 @@
+@charset "ISO-8859-1";
+ body {
+    background-image: url("https://cdn.wallpapersafari.com/95/73/iykvK2.jpg");
+    font-family: Arial, Helvetica, sans-serif;
+  }
+ 
+ .Notification .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: none;
+  }
+  .Notification .content{
+   position: absolute;
+   display: flex;
+   font-size: 150%;
+   top: 7%;
+   left: 50%;
+   transform: translate(-50%,-50%) scale(0);
+   border-radius: 5px;
+   background-color:black;
+   color: white;
+   width: 800px;
+   height: 50px;
+   z-index: 2;
+   text-align: center;
+   box-sizing: border-box;
+   align-items: center;
+  }
+  .Notification .icon{
+    cursor: pointer;
+    display: inline;
+    height: 50px;
+    position: absolute;
+    width: 10%;
+    border-top-left-radius: 3.5px;
+    border-bottom-left-radius: 3.5px;
+    top: 0px;
+    left: 0px;
+    font-size: 182%;
+    text-align: center;
+    background-color:#f95959;
+    font-weight: bolder;
+  }
+  .Notification.activePopup .overlay{
+    display: block;
+  }
+  .Notification.activePopup .content{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+  }
+
+  #adminButton {
+    font-size: 100px;
+    border-radius: 10px;
+    padding: 2px 5px 2px 5px;
+    background-color: #f95959;
+    cursor: pointer;
+  }
+
+  #userButton {
+    color: #fefefe;
+    font-size: 100px;
+    border-radius: 10px;
+    padding: 0px 5px 2px 5px;
+    background-color: #00cccc;
+    cursor: pointer;
+
+  }
+
+  #ChoiceBtns.active {
+    filter: blur(10px);
+  }
+
+  .bluredThings.active {
+    filter: blur(10px);
+  }
+
+  #adminBtn,
+  #UserBtn {
+    padding: 14px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  #SignUpBtn {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  #SignUpLink {
+    font-size: 130%;
+    font-weight: 125%;
+  }
+
+  .close {
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .close:hover {
+    cursor: pointer;
+    color: red;
+  }
+
+  .fa-circle-exclamation,.fa-circle-check {
+      position: absolute;
+      text-align: center;
+      bottom:5px;
+      right:20px;
+      color: white;
+      font-size: 40px;
+  }
+
+  .fa-user-large,
+  .fa-key,
+  .fa-phone,
+  .fa-envelope {
+    top: 20px;
+    font-size: 30px;
+    display: inline;
+  }
+
+  img.avatar {
+    width: 50%;
+    border-radius: 50%;
+  }
+    img.SignUpAvatar{
+    width: 45%;
+    border-radius: 50%;
+  }
+  input {
+    display: inline;
+    border: 1.5px solid black;
+    border-radius: 4px;
+    width: 70%;
+    height: 1.8em;
+    box-sizing: border-box;
+  }
+  .LoginField {
+    font-size: 250%;
+    color: white;
+  }
+
+  #AdminLoginForm,
+  #UserLoginForm,
+  #UserSignUpForm {
+    z-index: 1;
+    position: absolute;
+    box-shadow: 10px 10px 10px 10px black;
+    font-size: 125%;
+    text-align: center;
+    color: black;
+    width: 390px;
+    padding-top: 20px;
+    border: 4px;
+    border-radius: 5px;
+    background-color: #7c73e6;
+    display: none;
+  }
+
+  #AdminLoginForm
+ {
+    margin-top: -240px;
+  }
+  #UserLoginForm {
+    margin-top: -268px;
+  }
+  #UserSignUpForm {
+    margin-top: -325px;
+  }
+
+
+  .LoginBtn {
+    display: inline;
+    font-size: large;
+    background-color: #42b883;
+    width: 49%;
+    color: white;
+    border: none;
+    border-spacing: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+
+  .closeBtn {
+    display: inline;
+    font-size: large;
+    background-color: #ff395e;
+    width: 49%;
+    color: white;
+    border: none;
+    border-spacing: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+  }
+
+  .closeBtn:hover {
+    opacity: 1;
+  }
+
+  .LoginBtn:hover {
+    opacity: 1;
+  }
+
+  #AdminLoginForm,
+  #UserLoginForm,
+  #UserSignUpForm {
+    animation: animatezoom 0.6s
+  }
+
+  @keyframes animatezoom {
+    from {
+      transform: scale(0)
+    }
+
+    to {
+      transform: scale(1)
+    }
+  }
+
+  #ChoiceBtns {
+    margin: 5em 14em 0em 14em;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+
+  }
+
+  #choice {
+    text-align: center;
+  }
+
